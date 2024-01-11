@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.tryController">
+   <children>
+      <Circle fx:id="outer" fill="#2d4c32" layoutX="307.0" layoutY="184.0" radius="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Circle>
+      <Circle fx:id="inner" fill="#3d9a0ede" layoutX="307.0" layoutY="184.0" radius="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="play" fitHeight="102.0" fitWidth="126.0" layoutX="202.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/play-button-icon-white-8-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

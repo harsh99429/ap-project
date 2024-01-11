@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="607.0" focusTraversable="true" layoutX="-3.0" layoutY="-6.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/background.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="2.0" fill="#bfcbd7" height="211.0" layoutX="94.0" layoutY="95.0" stroke="BLACK" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="10.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="215.0" layoutY="61.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="10.0" width="170.0" />
+      <Text layoutX="241.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAUSED" wrappingWidth="129.94525146484375">
+         <font>
+            <Font name="HP Simplified Bold" size="33.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66a5e8ad" height="51.0" layoutX="212.0" layoutY="240.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="10.0" width="180.0" />
+      <Text layoutX="241.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESUME" wrappingWidth="129.94525146484375">
+         <font>
+            <Font name="HP Simplified Bold" size="36.0" />
+         </font>
+      </Text>
+      <Circle fill="WHITE" layoutX="157.0" layoutY="173.0" radius="36.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="129.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/reload-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Circle fill="WHITE" layoutX="447.0" layoutY="173.0" radius="36.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="42.0" fitWidth="60.0" layoutX="421.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/home-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Circle fill="WHITE" layoutX="306.0" layoutY="170.0" radius="36.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="49.0" fitWidth="67.0" layoutX="282.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/leaderBoard-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

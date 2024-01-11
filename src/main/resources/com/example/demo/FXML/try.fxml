@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.tryController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="608.0" layoutX="-2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/background.jpg" />
+         </image>
+         <effect>
+            <InnerShadow radius="68.5" width="255.0" />
+         </effect>
+      </ImageView>
+      <Circle fx:id="outer" fill="#2d4c32" layoutX="157.0" layoutY="200.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Circle>
+      <Circle fx:id="inner" fill="#3d9a0ede" layoutX="157.0" layoutY="200.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="play" fitHeight="68.0" fitWidth="84.0" layoutX="114.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/play-button-icon-white-8-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Circle id="ExitOuter" fx:id="outerexit" fill="#47302b" layoutX="443.0" layoutY="200.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Circle>
+      <Circle id="ExitInner" fx:id="innerexit" fill="#99210fde" layoutX="443.0" layoutY="200.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView id="ExitImage" fx:id="exit" fitHeight="68.0" fitWidth="84.0" layoutX="409.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/download-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="195.0" layoutY="25.0" prefHeight="114.0" prefWidth="229.0" text="STICK HERO">
+         <font>
+            <Font name="HP Simplified Bold" size="44.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="128.0" layoutX="267.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+      <ImageView id="player" fitHeight="68.0" fitWidth="84.0" layoutX="268.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/player.png" />
+         </image>
+      </ImageView>
+      <ImageView id="leaderBoard" cache="true" cacheHint="SPEED" fitHeight="93.0" fitWidth="95.0" layoutX="12.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/leader.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView id="reload" fitHeight="78.0" fitWidth="49.0" layoutX="537.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="leader" fx:id="leader" arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="93.0" layoutX="10.0" layoutY="299.0" opacity="0.21" stroke="TRANSPARENT" strokeType="INSIDE" width="100.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+      <Rectangle id="reload" fx:id="reload" arcHeight="5.0" arcWidth="5.0" fill="#ffbe1f" height="63.0" layoutX="531.0" layoutY="323.0" opacity="0.2" stroke="TRANSPARENT" strokeType="INSIDE" width="61.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Rectangle>
+   </children>
+</Pane>

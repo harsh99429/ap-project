@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#lineIncrease" onMouseMoved="#displayPosition" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.newIdea">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="413.0" layoutX="-3.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="606.0">
+            <effect>
+                <Shadow />
+            </effect>
+        </Rectangle>
+        <ImageView fx:id="background" fitHeight="400.0" fitWidth="600.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/background.jpg" />
+            </image>
+            <effect>
+                <GaussianBlur radius="8.03" />
+            </effect>
+        </ImageView>
+        <Circle id="ExitOuter" fx:id="outer" fill="#1b14eb" layoutX="49.0" layoutY="40.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+            <effect>
+                <Shadow />
+            </effect>
+        </Circle>
+        <Circle id="ExitInner" fx:id="inner" fill="#99210fde" layoutX="49.0" layoutY="40.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <ImageView fx:id="pause" fitHeight="25.0" fitWidth="33.0" layoutX="32.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/png-clipart-hugo-icon-collection-in-the-ecqlipse-2-style-track1-pause-thumbnail-removebg-preview.png" />
+            </image>
+        </ImageView>
+        <Rectangle fx:id="scoreSavor" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="32.0" layoutX="249.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="52.0" />
+        <Text fx:id="scoreReader" layoutX="264.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="41.00793933868408">
+            <font>
+                <Font name="HP Simplified Bold" size="28.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="cherry" fitHeight="52.0" fitWidth="33.0" layoutX="517.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/image-removebg-preview.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="cherryReader" layoutX="562.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="23.007939338684082">
+            <font>
+                <Font name="HP Simplified Bold" size="20.0" />
+            </font>
+        </Text>
+        <ImageView fx:id="user" fitHeight="77.0" fitWidth="61.0" layoutX="38.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/player.png" />
+            </image>
+        </ImageView>
+        <Rectangle fx:id="initial" arcHeight="5.0" arcWidth="5.0" height="118.0" layoutX="2.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+        <Line fx:id="stick1" endY="40.0" layoutX="81.0" layoutY="247.0" startY="40.0" strokeWidth="5.0" />
+        <Rectangle fx:id="obstacle1" arcHeight="5.0" arcWidth="5.0" height="118.0" layoutX="454.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+        <Text fx:id="status" layoutX="379.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="171.33331298828125">
+            <font>
+                <Font name="HP Simplified Bold" size="35.0" />
+            </font>
+        </Text>
+      <Group fx:id="revivalGroup" layoutX="141.0" layoutY="107.0" opacity="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c9e67" height="179.0" stroke="BLACK" strokeWidth="5.0" width="340.0" />
+            <Rectangle fx:id="cherryBox" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="23.0" layoutY="87.0" onTouchPressed="#revive" stroke="BLACK" strokeWidth="5.0" width="110.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="54.0" layoutX="80.0" layoutY="-10.0" stroke="BLACK" strokeWidth="5.0" width="169.0" />
+            <Text fx:id="scoreReader1" layoutX="97.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTINUE?" wrappingWidth="136.34125232696533">
+               <font>
+                  <Font name="HP Simplified Bold" size="28.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="cherry1" fitHeight="52.0" fitWidth="33.0" layoutX="36.0" layoutY="98.0" onTouchPressed="#revive" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/image-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="scoreBox" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="203.0" layoutY="87.0" stroke="BLACK" strokeWidth="5.0" width="110.0" />
+            <Text fx:id="scoreReader11" layoutX="225.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKIP" wrappingWidth="65.67456531524658">
+               <font>
+                  <Font name="HP Simplified Bold" size="28.0" />
+               </font>
+            </Text>
+            <Text fx:id="cherryReader1" layoutX="80.0" layoutY="122.0" onTouchPressed="#revive" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="34.34125232696533">
+               <font>
+                  <Font name="HP Simplified Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+
+    </children>
+</Pane>

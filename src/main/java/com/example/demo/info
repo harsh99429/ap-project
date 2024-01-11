@@ -1,0 +1,7 @@
+RevivalInfo -->
+Score cherry revivalCount
+initialRectangleX initialWidth
+obstacleX obstacleWidth
+
+LeaderInfo -->
+SerialNumber Score

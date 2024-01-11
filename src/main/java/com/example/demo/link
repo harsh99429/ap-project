@@ -1,0 +1,9 @@
+//playerScreen
+new.fxml -> playing.java
+
+//Start Screen
+try.fxml -> tryController.java
+
+//Leader Screen
+leader.fxml -> leaderController.java
+

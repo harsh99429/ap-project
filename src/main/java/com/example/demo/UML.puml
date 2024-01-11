@@ -1,0 +1,213 @@
+@startuml
+
+package com.example.demo {
+    class move {
+        +drag()
+    }
+
+    class Line {
+        -lineLength: double
+        +extend()
+        +fall()
+        +uniqueSolutionForCherry(p1: Pillar, p2: Pillar)
+    }
+
+    class Cherry {
+        -cherry: ImageView
+        +createCherry()
+        +diminishCherry()
+    }
+
+    class Pillar {
+        -p: Rectangle
+        -height: double
+        -width: double
+        +setHeight()
+        +setWidth()
+        +drawObstacle()
+        +saveObstacle()
+    }
+
+    class Player {
+        -playerPositionX: double
+        -playerPositionY: double
+        -cherryCount: int
+        -score: int
+        -revive: int
+        -revivalCost: int
+        -onLine: boolean
+        +run()
+        +flip()
+        +eatCherry(c: Cherry)
+        +crossedAPillar()
+        +wannaRevive(globalCherry: int)
+    }
+
+    class playController {
+        -gameWindow: Stage
+        -pause: ImageView
+        +stageFinder()
+        +initialize()
+        +openPauseDialog()
+    }
+
+    class StorageUnit {
+            -score: int
+            -cherry: int
+        }
+
+        class leaderController {
+            -leader: ArrayList<StorageUnit>
+            -inner: Circle
+            -outer: Circle
+            -back: ImageView
+            -p: Paint
+            -dataContainer: TableView
+
+            +action()
+            +action1()
+            +showData()
+            +initialize()
+            +startTimeline()
+        }
+
+         class exitClass {
+                +window: Stage
+                +scene1: Scene
+                +button1: Button
+                +button2: Button
+                +ans: boolean
+                +displayExitBox(): boolean
+            }
+
+            class tryController {
+                -play: ImageView
+                -outer: Circle
+                -inner: Circle
+                -p: Paint
+                -exit: ImageView
+                -innerexit: Circle
+                -outerexit: Circle
+                -pa: Paint
+                -leader: Rectangle
+                -reload: Rectangle
+
+                +action(p: Paint, inner: Circle, outer: Circle)
+                +action1(p: Paint, inner: Circle)
+                +initialize()
+                +startTimeline()
+                +startTimelineExit()
+            }
+
+         class StorageUnit {
+                 -storageId: int
+                 -UserPositionX: double
+                 -UserPositionY: double
+                 -cherry: int
+                 -score: int
+                 -r: Rectangle
+
+                 +getStorageId(): int
+                 +setStorageId(storageId: int): void
+                 +getUserPositionX(): double
+                 +setUserPositionX(userPositionX: double): void
+                 +getUserPositionY(): double
+                 +setUserPositionY(userPositionY: double): void
+                 +getCherry(): int
+                 +setCherry(cherry: int): void
+                 +getScore(): int
+                 +setScore(score: int): void
+                 +createRectangle(x: double, y: double, width: double, height: double): Rectangle
+                 +setRectangle(rectangle: Rectangle): void
+                 +getRectangle(): Rectangle
+             }
+
+         class pauseController {
+                 -resume: Button
+                 -restart: Button
+                 -home: Button
+
+                 +actionResume(): void
+                 +actionPause(): void
+                 +actionRestart(): void
+                 +home(): void
+             }
+
+          class reloadController {
+                  -storage: ArrayList<StorageUnit>
+                  -inner: Circle
+                  -outer: Circle
+                  -back: ImageView
+                  -dataContainer: TableView
+                  -p: Paint
+
+                  +action(): void
+                  +action1(): void
+                  +showData(): void
+                  +initialize(): void
+                  +startTimeline(): void
+          }
+          class menuController {
+                  -play: Circle
+                  -exit: Circle
+                  -leaderBoard: ImageView
+                  -window: Stage
+
+                  +playScreen(): void
+                  +initialize(): void
+          }
+
+          class HelloApplication {
+                  -window: Stage
+                  -scene1: Scene
+
+                  +start(stage: Stage): void
+                  +main(args: String[]): void
+              }
+
+           interface RectangleInterface {
+               +calculateArea(): double
+               +calculatePerimeter(): double
+           }
+
+           class rectangle extends Rectangle implements RectangleInterface {
+               -width: double
+               -height: double
+
+               +rectangle(width: double, height: double)
+               +calculateArea(): double
+               +calculatePerimeter(): double
+           }
+
+    }
+
+
+leaderController --|> Controller
+leaderController --|> Initializable
+leaderController --|> EventHandler
+move --|> Line
+Cherry --|> Line
+Pillar --|> move
+Player --|> move
+Player --|> Cherry
+playController --|> Stage
+exitClass --|> Stage
+exitClass --|> Scene
+exitClass --|> Button
+pauseController -- playController
+menuController -- leaderController
+menuController -- reloadController
+menuController --> exitClass
+menuController -- playController
+Player --> cherry
+Player --> leaderController
+tryController --|> ImageView
+tryController --|> Circle
+tryController --|> Paint
+tryController --|> Rectangle
+rectangle --|> Rectangle
+tryController --|> Controller
+tryController --|> Initializable
+tryController --|> EventHandler
+
+@enduml

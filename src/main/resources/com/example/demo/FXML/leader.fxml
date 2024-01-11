@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="394.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.leaderController">
+   <children>
+      <ImageView fitHeight="410.0" fitWidth="622.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/background.jpg" />
+         </image>
+         <effect>
+            <InnerShadow height="138.0" radius="97.75" width="255.0" />
+         </effect>
+      </ImageView>
+      <Label layoutX="153.0" layoutY="14.0" prefHeight="98.0" prefWidth="291.0" text="LEADERBOARD">
+         <font>
+            <Font name="HP Simplified Bold" size="44.0" />
+         </font>
+      </Label>
+      <Line endX="486.0" endY="7.62939453125E-6" layoutX="123.0" layoutY="88.0" startX="-126.0" startY="7.62939453125E-6" />
+      <Line endX="483.0" endY="7.62939453125E-6" layoutX="126.0" layoutY="102.0" startX="-126.0" startY="7.62939453125E-6" />
+      <Circle id="outerBack" fx:id="outer" fill="#4880a1" layoutX="47.0" layoutY="47.0" radius="32.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Shadow />
+         </effect>
+      </Circle>
+      <Circle id="innerBack" fx:id="inner" fill="#488cd4" layoutX="47.0" layoutY="47.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView id="back" fx:id="back" fitHeight="56.0" fitWidth="49.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/images-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="235.0" prefHeight="80.0" prefWidth="228.0" text="PREVIOUS SCORE: ">
+         <font>
+            <Font name="HP Simplified Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="137.0" prefHeight="98.0" prefWidth="247.0" text="HIGH SCORE: ">
+         <font>
+            <Font name="HP Simplified Bold" size="44.0" />
+         </font>
+      </Label>
+      <Label fx:id="previousScoreReader" layoutX="359.0" layoutY="239.0" prefHeight="71.0" prefWidth="141.0" text="0">
+         <font>
+            <Font name="HP Simplified Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="highScoreReader" layoutX="352.0" layoutY="143.0" prefHeight="86.0" prefWidth="228.0" text="0">
+         <font>
+            <Font name="HP Simplified Bold" size="44.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
